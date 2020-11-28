@@ -7,8 +7,6 @@ with open('reviews.txt','r') as f:
 		count +=1
 		if count % 1000 == 0:
 			print(len(data))
-	for len_per_data in f:
-		print(len(len_per_data))
 
 print(len(data))
 
@@ -17,3 +15,9 @@ for d in data:
 	sum_len = sum_len + len(d)
 
 print(sum_len/len(data))
+
+new =[]
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print(len(new))
